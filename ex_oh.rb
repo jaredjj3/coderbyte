@@ -6,12 +6,12 @@
 
 def ExOh(str)
   char_map = str.chars.group_by { |char| char }
-  char_map.fetch("x", []).count == char_map.fetch("o", []).count ? "true" : "false"
+  char_map.fetch("x", []).count == char_map.fetch("o", []).count
 end
    
-puts ExOh("xo") == "true"
-puts ExOh("xxo") == "false"
-puts ExOh("xxxo") == "false"
-puts ExOh("xxxoo") == "false"
-puts ExOh("xxoo") == "true"
-puts ExOh("") == "true"
+puts ExOh("xo") == true
+puts ExOh("xxo") == false
+puts ExOh("xxxo") == false
+puts ExOh("xxxoo") == false
+puts ExOh("xxoo") == true
+puts ExOh("") == true

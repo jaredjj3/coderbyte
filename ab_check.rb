@@ -6,15 +6,15 @@
 def ABCheck(str)
   str.each_char.with_index do |char, ndx|
     if char == "a"
-      return "true" if str[ndx + 4] == "b"
+      return true if str[ndx + 4] == "b"
     elsif char == "b"
-      return "true" if str[ndx + 4] == "a"
+      return true if str[ndx + 4] == "a"
     end
   end
 
-  return "false"
+  false
 end
   
-puts ABCheck("foo") == "false"
-puts ABCheck("lane borrowed") == "true"
-puts ABCheck("a   b") == "true"
+puts ABCheck("foo") == false
+puts ABCheck("lane borrowed") == true
+puts ABCheck("a   b") == true
